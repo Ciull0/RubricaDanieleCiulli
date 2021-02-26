@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Rubrica</string>
+    <string name="nome">Nome</string>
+    <string name="cognome">Cognome</string>
+    <string name="telefono">Telefono</string>
+    <string name="e_mail">E-Mail</string>
+    <string name="sito_web">Sito Web</string>
+    <string name="indirizzo">Indirizzo</string>
+    <string name="nomeWarning">Inserisci un Nome</string>
+    <string name="telefonoWarning">Inserisci un Numero di Telefono</string>
+    <string name="indirizzoWarning">Inserisci un Indirizzo</string>
+    <string name="sitoWarning">Inserisci un Sito Web</string>
+    <string name="password">Password</string>
+    <string name="utente">Utente</string>
+    <string name="login">Login</string>
+    <string name="registrati">Registrati</string>
+</resources>

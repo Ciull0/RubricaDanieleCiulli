@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/profilePicture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/nome"
+        app:layout_constraintHeight_percent="0.3"
+        android:scaleType="centerCrop"
+        />
+
+
+
+    <TextView
+        android:id="@+id/nome"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profilePicture"
+        android:textSize="30sp"
+        android:gravity="center"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        />
+
+
+    <ImageView
+        android:id="@+id/telefonoLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        app:layout_constraintEnd_toStartOf="@+id/telefono"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/phone"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:tint="@color/black" />
+    <TextView
+        android:id="@+id/telefono"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toEndOf="@id/telefonoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/nome"
+        android:text=""
+        android:gravity="center_vertical|end"
+        android:textColor="@color/black"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/mailLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoLabel"
+        app:layout_constraintEnd_toStartOf="@+id/mail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/mail"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/mail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/telefono"
+        app:layout_constraintStart_toEndOf="@id/mailLabel"
+        android:text=""
+        android:gravity="center_vertical|end"
+        android:textColor="@color/black"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/sitowebLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/mailLabel"
+        app:layout_constraintEnd_toStartOf="@+id/sitoweb"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/web"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/sitoweb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toEndOf="@id/sitowebLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mail"
+        android:text=""
+        android:gravity="center_vertical|end"
+        android:textColor="@color/black"
+        android:paddingRight="10dp"/>
+
+    <ImageView
+        android:id="@+id/indirizzoLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/sitowebLabel"
+        app:layout_constraintEnd_toStartOf="@+id/indirizzo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/home"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/indirizzo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/sitoweb"
+        app:layout_constraintStart_toEndOf="@id/indirizzoLabel"
+        android:text=""
+        android:gravity="center_vertical|end"
+        android:textColor="@color/black"
+        android:paddingRight="10dp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="35dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardBackgroundColor="@color/red"
+        >
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/delete"
+            app:tint="@color/black" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="35dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/black"
+        >
+        <ImageView
+            android:id="@+id/btnEdit2"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/edit"
+            app:tint="@color/yellow" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

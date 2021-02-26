@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "180864136235",
+    "project_id": "rubrica-d8e29",
+    "storage_bucket": "rubrica-d8e29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180864136235:android:30019425f0b65415df666e",
+        "android_client_info": {
+          "package_name": "com.danieleciulli.rubrica"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "180864136235-ruflos6fb3vnsg7e8ouljcsdjugjf6st.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVBb5zDMesuZ2DdMeLSlPEutWTdNKLv0c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "180864136235-ruflos6fb3vnsg7e8ouljcsdjugjf6st.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

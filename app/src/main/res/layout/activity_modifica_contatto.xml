@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+
+    <EditText
+        android:id="@+id/nomeEdit"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="30sp"
+        android:inputType="textPersonName"
+        android:gravity="center"
+        android:textColorHint="@color/grey"
+        android:textColor="@color/black"
+        android:hint="@string/nome"
+        />
+
+
+    <ImageView
+        android:id="@+id/telefonoLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/nomeEdit"
+        app:layout_constraintEnd_toStartOf="@+id/telefonoEdit"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/phone"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/telefonoEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toEndOf="@id/telefonoLabel"
+        app:layout_constraintTop_toBottomOf="@+id/nomeEdit"
+        android:hint="@string/telefono"
+        android:inputType="phone"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/mailLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoLabel"
+        app:layout_constraintEnd_toStartOf="@+id/mail"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/mail"
+        android:textSize="20sp"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/mailEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoEdit"
+        app:layout_constraintStart_toEndOf="@id/mailLabel"
+        android:hint="@string/e_mail"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/sitowebLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/mailLabel"
+        app:layout_constraintEnd_toStartOf="@+id/sitoweb"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/web"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/sitowebEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintStart_toEndOf="@id/sitowebLabel"
+        app:layout_constraintTop_toBottomOf="@+id/mailEdit"
+        android:hint="@string/sito_web"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:inputType="textWebEditText"
+        android:gravity="center"/>
+
+    <ImageView
+        android:id="@+id/indirizzoLabel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.2"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/sitowebLabel"
+        app:layout_constraintEnd_toStartOf="@+id/indirizzo"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/home"
+        android:gravity="center" />
+    <EditText
+        android:id="@+id/indirizzoEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintTop_toBottomOf="@+id/sitowebEdit"
+        app:layout_constraintStart_toEndOf="@id/indirizzoLabel"
+        android:hint="@string/indirizzo"
+        android:textColor="@color/black"
+        android:textColorHint="@color/grey"
+        android:inputType="textPostalAddress"
+        android:gravity="center" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/btnSave"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        app:cardCornerRadius="35dp"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardBackgroundColor="@color/black"
+        >
+        <ImageView
+            android:padding="10dp"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/save"
+            app:tint="@color/yellow" />
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
