@@ -17,12 +17,15 @@ public class ModificaContatto extends AppCompatActivity implements View.OnClickL
     EditText nome, mail, indizzo, sito, telefono;
     CardView btnSave;
     Contatto info;
+    Utente utenteCorrente;
     boolean nuovo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_modifica_contatto);
+
+        utenteCorrente = DBManager.getInstance(getApplicationContext()).getUtentiDAO().getUtente();
 
         Intent i = getIntent();
         if (i != null) {
@@ -126,15 +129,18 @@ public class ModificaContatto extends AppCompatActivity implements View.OnClickL
                     if (nuovo) {
                         Intent i = new Intent(this, listacontatti.class);
                         DBManager.getInstance(getApplicationContext()).getContattiDAO().insertContatto(info);
+                        i.putExtra("utente",utenteCorrente);
                         this.startActivity(i);
                     } else {
                         Intent i = new Intent(this, listacontatti.class);
                         DBManager.getInstance(getApplicationContext()).getContattiDAO().updateContatto(info);
+                        i.putExtra("utente",utenteCorrente);
                         this.startActivity(i);
                     }
                 }
                 if(!change){
                     Intent i = new Intent(this, listacontatti.class);
+                    i.putExtra("utente",utenteCorrente);
                     this.startActivity(i);
                 }
 

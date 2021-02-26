@@ -22,11 +22,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ImageView fotoProfilo,btnEdit,btnDelete;
     TextView nome,cognome,cellulare,mail,indirizzo,sitoweb;
     Contatto info;
+    Utente utenteCorrente;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        utenteCorrente=DBManager.getInstance(getApplicationContext()).getUtentiDAO().getUtente();
 
         Intent i = getIntent();
         if(i != null){
@@ -108,6 +111,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btnDelete:
                 Intent i = new Intent(m,listacontatti.class);
+                i.putExtra("utente",utenteCorrente);
                 DBManager.getInstance(getApplicationContext()).getContattiDAO().deleteContatto(info);
                 this.startActivity(i);
         }

@@ -23,6 +23,16 @@ public class Contatto implements Serializable {
     @ColumnInfo
     private String fotoProfilo;
 
+    public Contatto(String id, String nome, String cellulare, String mail, String indirizzo, String sitoweb, String fotoProfilo) {
+        this.id = Integer.valueOf(id);
+        this.nome = nome;
+        this.cellulare = cellulare;
+        this.mail = mail;
+        this.indirizzo = indirizzo;
+        this.sitoweb = sitoweb;
+        this.fotoProfilo = fotoProfilo;
+    }
+
     public Contatto() {
         this.nome = "";
         this.cellulare = "";
