@@ -54,12 +54,12 @@ public class FirebaseManager {
                     if(document.exists()){
                         Log.d("firebaseMio","C'è documento   "+document.getData());
 
-                        contattiperdavvero = new ArrayList<Contatto>();
+                        for (Object contattoSingolo: document.getData().values()){
+                            contattiperdavvero.add( (Contatto) contattoSingolo);
+                        }
+                        Log.d("firebaseMio","C'è documentoList   "+contattiperdavvero);
 
-                        List<Object> rubricaLista = new ArrayList(document.getData().values());
-                        Log.d("firebaseMio","C'è documentoList   "+rubricaLista);
-
-                        for(Object contattoSingolo : rubricaLista){
+                        for(Object contattoSingolo : contattiperdavvero){
                             Log.d("firebaseMio","C'è Contatto   "+contattoSingolo);
 
                             /*Class<?> contattoClass = contattoSingolo.getClass();
